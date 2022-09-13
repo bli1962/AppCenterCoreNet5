@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Repositive\**" />
+    <EmbeddedResource Remove="Repositive\**" />
+    <None Remove="Repositive\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="mhcb.Syd.Business.csproj.vspscc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper.StrongName" Version="2.0.123" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\mhcb.Syd.DataAccess\mhcb.Syd.DataAccess.csproj" />
+    <ProjectReference Include="..\mhcb.Syd.Interface\mhcb.Syd.Interface.csproj" />
+    <ProjectReference Include="..\mhcb.Syd.Models\mhcb.Syd.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Repository\RATES\" />
+  </ItemGroup>
+
+</Project>
